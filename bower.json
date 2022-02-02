@@ -1,12 +1,10 @@
 {
-  "name": "jquery-timeago",
+  "name": "es6-relativistic",
   "license": "MIT",
-  "main": "jquery.timeago.js",
+  "main": "relativistic.js",
   "ignore": [
     "test",
     "vendor"
   ],
-  "dependencies": {
-    "jquery": ">=1.4"
-  }
+  "dependencies": {}
 }

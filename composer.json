@@ -1,32 +1,33 @@
 {
-  "name": "rmm5t/jquery-timeago",
-  "description": "jQuery plugin that makes it easy to support automatically updating fuzzy timestamps (e.g. \"4 minutes ago\" or \"about 1 day ago\").",
+  "name": "amcgregor/es6-relativistic",
+  "description": "Natural language relativistic time presentation (e.g. '4 minutes ago') in plain ES6.",
   "license": "MIT",
-  "homepage": "http://timeago.yarp.com/",
+  "homepage": "http://relativistic.webcore.io/",
   "authors": [
+    {
+      "name": "Alice Bevan-McGregor",
+      "email": "alice@gothcandy.com"
+    },
     {
       "name": "Ryan McGeary",
       "email": "ryan@mcgeary.org"
     }
   ],
   "support": {
-    "issues": "https://github.com/rmm5t/jquery-timeago/issues"
+    "issues": "https://github.com/amcgregor/es6-relativistic/issues"
   },
   "keywords": [
     "time",
     "microformat"
   ],
   "require": {
-    "components/jquery": ">=1.5.0 <4.0"
   },
   "extra": {
     "component": {
       "scripts": [
-        "jquery.timeago.js"
+        "relativistic.js"
       ],
-      "files": [
-        "locales/jquery.timeago.*.js"
-      ]
+      "files": []
     }
   }
 }

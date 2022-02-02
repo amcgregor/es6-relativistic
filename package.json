@@ -1,11 +1,11 @@
 {
-  "name": "timeago",
-  "version": "1.6.7",
-  "title": "jQuery Timeago",
+  "name": "relativistic",
+  "version": "1.0.0",
+  "title": "ES6 Relativistic",
   "author": {
-    "name": "Ryan McGeary",
-    "email": "ryan@mcgeary.org",
-    "url": "http://ryan.mcgeary.org/"
+    "name": "Alice Bevan-McGregor",
+    "email": "alice@gothcandy.com",
+    "url": "https://github.com/amcgregor/"
   },
   "licenses": [
     {
@@ -14,24 +14,23 @@
     }
   ],
   "dependencies": {
-    "jquery": ">=1.5.0 <4.0"
   },
-  "description": "jQuery plugin that makes it easy to support automatically updating fuzzy timestamps (e.g. \"4 minutes ago\" or \"about 1 day ago\").",
+  "description": "Natural language relativistic time presentation (e.g. \"4 minutes ago\") in plain ES6.",
   "keywords": [
     "time",
     "microformat"
   ],
-  "homepage": "http://timeago.yarp.com/",
-  "docs": "https://github.com/rmm5t/jquery-timeago",
-  "demo": "http://timeago.yarp.com/",
-  "download": "http://timeago.yarp.com/jquery.timeago.js",
-  "bugs": "https://github.com/rmm5t/jquery-timeago/issues",
+  "homepage": "http://relativistic.webcore.io/",
+  "docs": "https://github.com/amcgregor/es6-relativistic",
+  "demo": "http://relativistic.webcore.io/",
+  "download": "http://relativistic.webcore.io/relativistic.js",
+  "bugs": "https://github.com/amcgregor/es6-relativistic/issues",
   "maintainers": [],
   "spm": {
-    "main": "jquery.timeago.js"
+    "main": "relativistic.js"
   },
   "browser": {
-    "timeago": "./node_modules/timeago/jquery.timeago.js"
+    "timeago": "./node_modules/relativistic/relativistic.js"
   },
-  "main": "jquery.timeago.js"
+  "main": "relativistic.js"
 }
