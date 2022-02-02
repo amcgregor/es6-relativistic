@@ -1,4 +1,5 @@
-Copyright (c) 2008-2019 Ryan McGeary
+Copyright © 2008-2019 Ryan McGeary  
+Copyright © 2021 Alice Bevan-McGregor
 
 MIT License
 
