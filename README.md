@@ -1,81 +1,50 @@
-# timeago: a jQuery plugin
+# Relativistic
 
-[![NPM](https://img.shields.io/npm/v/timeago.svg)](https://www.npmjs.com/package/timeago)
-[![Bower](https://img.shields.io/bower/v/jquery-timeago.svg)](http://bower.io/search/?q=jquery-timeago)
+[![NPM](https://img.shields.io/npm/v/relativistic.svg)](https://www.npmjs.com/package/relativistic)
+[![Bower](https://img.shields.io/bower/v/relativistic.svg)](http://bower.io/search/?q=relativistic)
 
-Timeago is a jQuery plugin that makes it easy to support automatically updating
-fuzzy timestamps (e.g. "4 minutes ago" or "about 1 day ago") from ISO 8601
-formatted dates and times embedded in your HTML (à la microformats).
+Relativistic is a pure ES6 library to support presentation and automatic update of date elements (à la microformats) within your pages. It transforms the ISO timestamp attribute of the element into a natural language reference, e.g. "4 minutes ago" or "about 1 day ago", then maintains the accuracy of those presentations as long as the page is open.
+
 
 ## Usage
 
-First, load jQuery and the plugin:
+First, load the plugin:
 
 ```html
-<script src="jquery.min.js" type="text/javascript"></script>
-<script src="jquery.timeago.js" type="text/javascript"></script>
+<script src=relativistic.js></script>
 ```
 
-Now, let's attach it to your timestamps on DOM ready - put this in the head
-section:
+All `<time>` elements possessing a CSS class of `relative` within the page the script is loaded into will be automatically reformatted. Such elements made relative will have their existing inner text preserved as their `title` attribute, will be updated periodically while the page remains visible and will be automatically refreshed when the page becomes visible once more.
+
+While `<time>` element `datetime` attributes should be formatted according to the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) standard, this library accepts any value acceptable for passing to the JavaScript `Date` object constructor.
 
 ```html
-<script type="text/javascript">
-   jQuery(document).ready(function() {
-     $("time.timeago").timeago();
-   });
-</script>
+<time class=relative datetime=2011-12-17T09:24:17Z>December 17, 2011</time>
 ```
 
-This will turn all `<time>` elements with a class of `timeago` and a
-`datetime` attribute formatted according to the
-[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) standard:
+Becomes something like:
 
 ```html
-<time class="timeago" datetime="2011-12-17T09:24:17Z">December 17, 2011</time>
-```
-
-into something like this:
-
-```html
-<time class="timeago" datetime="2011-12-17T09:24:17Z" title="December 17, 2011">about 1 day ago</time>
-```
-
-`<abbr>` elements (or any other HTML elements) are also supported (this is for
-[legacy microformat support](http://microformats.org/wiki/datetime-design-pattern)
-and was originally supported by the library before the `time` element was
-introduced to HTML5):
-
-```html
-<abbr class="timeago" title="2011-12-17T09:24:17Z">December 17, 2011</abbr>
+<time class="relative live" datetime=2011-12-17T09:24:17Z title="December 17, 2011">about 1 day ago</time>
 ```
 
 As time passes, the timestamps will automatically update.
 
-If you want to update a timestamp programatically later, call the `update`
-function with a new ISO8601 timestamp of `Date` object. For example:
+**For more usage and examples**: [http://relativistic.webcore.io/](http://relativistic.webcore.io/)
 
-```javascript
-$("time#some_id").timeago("update", "2013-12-17T09:24:17Z");
-// or
-$("time#some_id").timeago("update", new Date());
-```
+**For different language configurations**: visit the [`locales`](https://github.com/amcgregor/es6-relativistic/tree/master/locales) directory.
 
-**For more usage and examples**: [http://timeago.yarp.com/](http://timeago.yarp.com/)
 
-**For different language configurations**: visit the [`locales`](https://github.com/rmm5t/jquery-timeago/tree/master/locales) directory.
+## Configuration
 
-## Settings
+TBD
 
-**`cutoff`** : Return the original date if time distance is older than `cutoff` (miliseconds).
-
-```javascript
-// Display original dates older than 24 hours
-jQuery.timeago.settings.cutoff = 1000*60*60*24;
-```
 
 ## Changes
 
+TBD
+
+<!--
 | Version | Notes                                                                           |
 |---------|---------------------------------------------------------------------------------|
 |   1.6.x | ([compare][compare-1.6]) Wraped locales in UMD wrappers; locale improvements    |
@@ -89,8 +58,7 @@ jQuery.timeago.settings.cutoff = 1000*60*60*24;
 |  0.10.x | ([compare][compare-0.10]) locale updates                                        |
 |   0.9.x | ([compare][compare-0.9]) microsecond support; bug fixes                         |
 |   0.8.x | ([compare][compare-0.8]) `<time>` element support; bug fixes                    |
-|   0.7.x | ([compare][compare-0.7]) locale function overrides; unit tests                  |
-|     ... | ...                                                                             |
+|   0.0.1 | ([compare][compare-0.7]) locale function overrides; unit tests                  |
 
 [compare-1.6]: https://github.com/rmm5t/jquery-timeago/compare/v1.5.4...v1.6.7
 [compare-1.5]: https://github.com/rmm5t/jquery-timeago/compare/v1.4.3...v1.5.4
@@ -104,11 +72,17 @@ jQuery.timeago.settings.cutoff = 1000*60*60*24;
 [compare-0.9]: https://github.com/rmm5t/jquery-timeago/compare/v0.8.2...v0.9.3
 [compare-0.8]: https://github.com/rmm5t/jquery-timeago/compare/v0.7.2...v0.8.2
 [compare-0.7]: https://github.com/rmm5t/jquery-timeago/compare/v0.6.2...v0.7.2
+-->
 
-## Author
 
-[Ryan McGeary](http://ryan.mcgeary.org) ([@rmm5t](http://twitter.com/rmm5t))
+## Authors
+
+[Ryan McGeary](http://ryan.mcgeary.org) ([@rmm5t](https://twitter.com/rmm5t))
+
+[Alice Bevan–McGregor](https://github.com/amcgregor/) ([@GothAlice](https://twitter.com/GothAlice))
+
 
 ## License
 
 [MIT License](https://rmm5t.mit-license.org/)
+
