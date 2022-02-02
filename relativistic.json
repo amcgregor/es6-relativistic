@@ -1,0 +1,29 @@
+{
+  "name": "Relativistic",
+  "version": "1.6.7",
+  "title": "ES6-Relativistic",
+  "author": {
+    "name": "Alice Bevan-McGregor",
+    "email": "alice@gothcandy.com",
+    "url": "https://github.com/amcgregor/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "dependencies": {
+  },
+  "description": "Natural language relativistic time presentation (e.g. '4 minutes ago') in plain ES6.",
+  "keywords": [
+    "time",
+    "microformat"
+  ],
+  "homepage": "https://relativistic.webcore.io/",
+  "docs": "https://github.com/amcgregor/es6-relativistic",
+  "demo": "https://relativistic.webcore.io/",
+  "download": "https://relativistic.webcore.io/relativistic.js",
+  "bugs": "https://github.com/amcgregor/es6-relativistic/issues",
+  "maintainers": []
+}
